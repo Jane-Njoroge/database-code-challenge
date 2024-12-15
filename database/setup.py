@@ -3,7 +3,7 @@ from .connection import get_db_connection
 def create_tables():
     conn = get_db_connection()
     cursor = conn.cursor()
-    
+
     cursor.execute('''
         CREATE TABLE IF NOT EXISTS authors (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -29,5 +29,5 @@ def create_tables():
         )
     ''')
 
-    conn.commit()
-    conn.close()
+conn.commit()
+conn.close()
